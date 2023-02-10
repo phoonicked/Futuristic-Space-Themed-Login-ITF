@@ -1,0 +1,130 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 20px;
+    font-family: Tahoma;
+    overflow: hidden;
+}
+
+.imageContainer{
+    height: 300px;
+    width: auto;
+    margin-top: 90px;
+    margin-bottom: -200px;
+    align-items: center;
+    overflow: hidden;
+}
+
+.large-header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background: #333;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center center;
+    z-index: 1;
+}
+
+#large-header {
+    background-image: url("nic-chi-guvnhd3hbxw-unsplash.jpg");
+    image-rendering: -webkit-optimize-contrast;
+}
+
+.main-title {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    color: #f9f1e9;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate3d(-50%, -50%, 0);
+    transform: translate3d(-50%, -50%, 0);
+}
+
+.demo-1 .main-title {
+    text-transform: uppercase;
+    font-size: 4.2em;
+    letter-spacing: 0.1em;
+}
+
+.main-title .thin {
+    font-weight: 200;
+}
+
+@media only screen and (max-width: 768px) {
+    .demo-1 .main-title {
+      font-size: 3em;
+    }
+}
+
+
+input{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+    height: 30px;
+    border: 2px solid gray;
+    transition: border 1s ease-in-out, transform 250ms;
+    text-align: center;
+}
+
+.logo{
+    height: 35px;
+    width: auto;
+    margin-bottom: 10px;
+    box-shadow: inset 0 0 0 100vmax rgba(230, 230, 250, 0.5);
+    border-radius: 30%;
+}
+
+
+form {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container {
+    position: relative;
+    top: 50%;
+    margin-top: -50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+input:focus{
+    border: 2px solid #a379f7;
+    transform: translateY(-5px);
+    transition: transform 250ms;
+    outline-color: #a379f7;
+}
+
+input:hover{
+    transform: translateY(-5px);
+}
+
+.btn{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+#error-message {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+    
+#error-message.show {
+    display: block;
+    opacity: 1;
+}
