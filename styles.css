@@ -117,14 +117,3 @@ input:hover{
     display: flex;
     justify-content: center;
 }
-
-#error-message {
-    display: none;
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-}
-    
-#error-message.show {
-    display: block;
-    opacity: 1;
-}
